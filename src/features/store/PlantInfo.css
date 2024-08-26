@@ -1,0 +1,118 @@
+/* *************************** */
+/*          Plant Info         */
+/* *************************** */
+
+.plant-info {
+  position: sticky;
+  top: 1rem;
+  margin: 0 auto;
+  width: 90%;
+  padding: 0 4.8rem;
+  padding-bottom: 3.6rem;
+  height: fit-content;
+  background-color: #e6fcf5;
+  border-radius: 9.6rem 0 9.6rem 9.6rem;
+  box-shadow: -0.3rem -0.3rem 1.2rem #969897;
+  font-size: 1.6rem;
+}
+
+.plant-info-cart-btns {
+  display: block;
+  cursor: pointer;
+  width: 80%;
+  margin: 1.6rem auto;
+  color: white;
+  padding: 1.6rem 1.4rem;
+  border-radius: 2.4rem;
+  border: none;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.plant-info-cart-btns:active {
+  transform: translateY(10px);
+}
+
+.plant-info .add-btn {
+  background-color: var(--main-color);
+}
+
+.plant-info .add-btn:hover {
+  background-color: #3aad4f;
+  box-shadow: none;
+}
+
+.plant-info .add-btn:active {
+  background-color: (--main-color);
+}
+
+.plant-info .delete-btn {
+  background-color: #b91c1c;
+}
+
+.plant-info .delete-btn:hover {
+  background-color: #dc2626;
+  box-shadow: none;
+}
+
+.plant-info .delete-btn:active {
+  background-color: #b91c1c;
+  box-shadow: none;
+}
+
+.plant-info-img {
+  max-width: 100%;
+  border-radius: 6.4rem 0 6.4rem 0;
+  box-shadow: -0.6rem 0.6rem 1rem #969897;
+  margin-top: 4.8rem;
+}
+
+.plant-info .text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2.4rem;
+  column-gap: 3.6rem;
+  row-gap: 1.6rem;
+  color: #0d4534;
+}
+.plant-info-name {
+  font-size: 1.8rem;
+}
+.plant-info-price,
+.count {
+  text-align: center;
+}
+
+.btn-count {
+  cursor: pointer;
+  display: inline-block;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 1.6rem 0 1.6rem 0;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-count:active {
+  transform: translateY(5px);
+}
+
+.btn-count:hover {
+  background-color: #40c057;
+}
+.count-down {
+  margin-right: 0.8rem;
+}
+
+.count-up {
+  margin-left: 0.8rem;
+}
+
+.plant-info-description {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  text-align: left;
+  line-height: 1.3;
+}

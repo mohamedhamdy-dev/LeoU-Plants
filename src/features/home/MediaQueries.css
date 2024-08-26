@@ -1,0 +1,60 @@
+/* *************************** */
+/*            Home             */
+/* *************************** */
+
+@media (max-width: 1200px) {
+  .home-content {
+    padding: 1.8rem 1.6rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .home-content {
+    margin-top: 0;
+  }
+  .home-content .home-text {
+    padding: 1.2rem 0.4rem;
+  }
+
+  .home-text .home-title {
+    font-size: 5rem;
+  }
+
+  .home-text .home-message {
+    font-size: 1.8rem;
+    text-align: left;
+    line-height: 1.3;
+  }
+
+  .home-text .home-btn:link,
+  .home-text .home-btn:visited {
+    margin-top: 0.4rem;
+  }
+}
+
+@media (max-width: 786px) {
+  .home-content {
+    flex-direction: column;
+  }
+
+  .home-content .home-text {
+    max-width: 90%;
+    align-self: center;
+  }
+}
+@media (max-width: 500px) {
+  .home-text .home-title {
+    font-size: 8vw;
+  }
+  .home-text .home-message {
+    font-size: 3.6vw;
+  }
+
+  .home-content .home-btn:link,
+  .home-content .home-btn:visited {
+    padding: 0.6rem;
+    font-size: 1rem;
+    border-radius: 18px;
+    font-weight: 300;
+  }
+}
