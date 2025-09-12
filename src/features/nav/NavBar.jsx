@@ -12,7 +12,6 @@ export default function NavBar() {
   return (
     <header className="header">
       <div className="logo">
-        {/* <div className="logo-image" style={{ background: "url()" }}></div> */}
         <img src="/logo.png" alt="logo" className="logo-image" />
         <div className="logo-text">LeoU's</div>
       </div>
@@ -31,16 +30,16 @@ export default function NavBar() {
             <NavLink to="/">Home</NavLink>
           </li>
           <li className="nav-list-item" onClick={handleIcon}>
-            <NavLink to="Gallery">Gallery</NavLink>
+            <NavLink to="gallery">Gallery</NavLink>
           </li>
           <li className="nav-list-item" onClick={handleIcon}>
-            <NavLink to="Store">Store</NavLink>
+            <NavLink to="store">Store</NavLink>
           </li>
           <li className="nav-list-item" onClick={handleIcon}>
-            <NavLink to="Contact">Contact</NavLink>
+            <NavLink to="contact">Contact</NavLink>
           </li>
           <li className="nav-list-item" onClick={handleIcon}>
-            <NavLink to="Login">Login</NavLink>
+            <NavLink to="account">Account</NavLink>
           </li>
         </ul>
       </nav>

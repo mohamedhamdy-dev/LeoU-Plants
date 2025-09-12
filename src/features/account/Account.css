@@ -1,14 +1,14 @@
 /* *************************** */
 /*           Login Page        */
 /* *************************** */
-.login-page {
+.account-page {
   display: flex;
   justify-content: space-around;
   margin-top: 6.4rem;
   padding-bottom: 2.4rem;
 }
 
-.login-page-text {
+.account-text {
   flex-basis: 60%;
   font-size: 1.6rem;
   display: flex;
@@ -17,11 +17,11 @@
   align-items: center;
 }
 
-.login-page-heading {
+.account-heading {
   font-size: 2.6rem;
 }
 
-.login-page-message {
+.account-message {
   padding: 0.4rem 6rem;
   line-height: 1.4;
   margin-top: 1rem;
@@ -57,25 +57,18 @@
   font-size: 1.6rem;
   margin-bottom: 2.4rem;
 }
-.form-footer-link:link,
-.form-footer-link:visited {
-  color: var(--main-color);
-  transition: all 0.3s;
-}
-.form-footer-link:hover,
-.form-footer-link:active {
-  color: #51cf66;
-}
-
-.login-create-btn {
+.form-link:link,
+.form-link:visited {
   border: none;
   color: inherit;
   cursor: pointer;
   font-size: 1.8rem;
   transition: all 0.3s;
   background-color: transparent;
+  text-decoration: none;
 }
-.login-create-btn:hover {
+.form-link:hover,
+.form-link:active {
   color: #51cf66;
   transform: scale(1.1);
 }
@@ -140,18 +133,15 @@
 /* Login form box                  */
 /* ******************************* */
 
-.login-form-title {
+.sign-in-title {
   margin-top: 1.6rem;
 }
 
 /* ******************************* */
 /* Create Acount form box  */
 /* ******************************* */
-.create-form-img {
-  border-radius: 50%;
-  box-shadow: -0.5rem 0.4rem 0.7rem #969897;
-}
-.create-form-title {
+
+.sign-up-title {
   margin-top: 2.4rem;
 }
 
@@ -164,24 +154,24 @@
     font-size: 60%;
   }
 
-  .login-page .login-page-text {
+  .account-page .account-text {
     flex-basis: 60%;
   }
 
-  .login-page .login-page-heading {
+  .account-page .account-heading {
     font-size: 2.4rem;
   }
 
-  .login-page .login-page-message {
+  .account-page .account-message {
     padding: 0.4rem 4.8rem;
   }
 
-  .login-page .create-form-box,
-  .login-page .login-form-box {
+  .account-page .sign-up-form-box,
+  .account-page .sign-in-form-box {
     flex-basis: 40%;
   }
 
-  .login-page .common-form-title {
+  .account-page .common-form-title {
     font-size: 2.6rem;
     margin-top: 3.2rem;
   }
@@ -192,31 +182,31 @@
     font-size: 58%;
   }
 
-  .login-page {
+  .account-page {
     flex-direction: column;
     align-items: center;
     gap: 9.6rem;
   }
-  .login-page .login-page-heading {
+  .account-page .account-heading {
     font-size: 3.4rem;
   }
 
-  .login-page .login-page-message {
+  .account-page .account-message {
     padding: 0.8rem 8vw;
   }
-  .login-page .create-form-box,
-  .login-page .login-form-box {
+  .account-page .sign-up-form-box,
+  .account-page .sign-in-form-box {
     width: 55%;
   }
 
-  .login-page .common-form-title {
+  .account-page .common-form-title {
     font-size: 4.2vw;
   }
 
-  .login-page .input-field {
+  .account-page .input-field {
     width: 75%;
   }
-  .login-page .submit-btn {
+  .account-page .submit-btn {
     padding: 0.8rem 2.4rem;
     font-size: 1.6rem;
   }
@@ -227,21 +217,21 @@
     font-size: 55%;
   }
 
-  .login-page .create-form-box,
-  .login-page .login-form-box {
+  .account-page .sign-up-form-box,
+  .account-page .sign-in-form-box {
     width: 55%;
   }
 }
 
 @media (max-width: 530px) {
-  .login-page .login-page-heading {
+  .account-page .account-heading {
     font-size: 5vw;
   }
-  .login-page .common-form-title {
+  .account-page .common-form-title {
     font-size: 7vw;
   }
-  .login-page .create-form-box,
-  .login-page .login-form-box {
+  .account-page .sign-up-form-box,
+  .account-page .sign-in-form-box {
     width: 85%;
   }
 }

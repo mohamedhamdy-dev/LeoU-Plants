@@ -5,27 +5,27 @@ import Slider from "react-slick";
 const imagesData = [
   {
     id: 1,
-    img: "/gallary/aa.jpg",
+    img: "/gallery/aa.jpg",
   },
   {
     id: 2,
-    img: "/gallary/bb.jpg",
+    img: "/gallery/bb.jpg",
   },
   {
     id: 3,
-    img: "/gallary/cc.jpg",
+    img: "/gallery/cc.jpg",
   },
   {
     id: 4,
-    img: "/gallary/dd.jpg",
+    img: "/gallery/dd.jpg",
   },
   {
     id: 5,
-    img: "/gallary/ee.jpg",
+    img: "/gallery/ee.jpg",
   },
   {
     id: 6,
-    img: "/gallary/ff.jpg",
+    img: "/gallery/ff.jpg",
   },
 ];
 var settings = {
