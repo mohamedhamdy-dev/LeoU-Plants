@@ -74,15 +74,15 @@
 }
 
 [id="name"] {
-  background-image: url("../../images/user1.png");
+  background-image: url("../../../public/form/user.png");
 }
 
 [id="email"] {
-  background-image: url("../../images/email.png");
+  background-image: url("../../../public/form/email.png");
 }
 
 [id="subject"] {
-  background-image: url("../../images/book.png");
+  background-image: url("../../../public/form/book.png");
 }
 
 .contact .send-btn {
@@ -119,4 +119,45 @@
 
 .social-icon {
   margin-top: 2.4rem;
+}
+
+/* *************************** */
+/*    Contact Media Queries    */
+/* *************************** */
+
+@media (max-width: 992px) {
+  .container .contact {
+    flex-direction: column;
+  }
+
+  .contact-background {
+    padding-top: 1rem;
+    text-align: center;
+  }
+  .contact-background-img {
+    max-width: 80%;
+  }
+  .social-icon-box {
+    gap: 4.8rem;
+    max-width: 90%;
+    margin: 0 auto;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 500px) {
+  .message-form {
+    max-width: 90%;
+    padding: 3.6rem 2.6rem;
+  }
+
+  .social-icon-box {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .social-icon-box {
+    gap: 2em;
+  }
 }

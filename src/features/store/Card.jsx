@@ -1,4 +1,3 @@
-import { React } from "react";
 import { useCart } from "../../context/cartContext";
 
 export function Card({ data }) {
@@ -8,11 +7,7 @@ export function Card({ data }) {
   return (
     <div className="product-item" onClick={() => handleChosen(data)}>
       <div className="product-item-image">
-        <img
-          className="product-item-img"
-          src={Object.values(image)}
-          alt={name}
-        />
+        <img className="product-item-img" src={image} alt={name} />
       </div>
       <div className="text">
         <h2 className="product-item-name">{name}</h2>

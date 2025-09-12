@@ -12,7 +12,8 @@ export default function NavBar() {
   return (
     <header className="header">
       <div className="logo">
-        <div className="logo-image"></div>
+        {/* <div className="logo-image" style={{ background: "url()" }}></div> */}
+        <img src="/logo.png" alt="logo" className="logo-image" />
         <div className="logo-text">LeoU's</div>
       </div>
       <nav className="nav">

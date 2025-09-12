@@ -55,7 +55,7 @@ export function PlantInfo() {
   return (
     <div className="plant-info">
       <div>
-        <img className="plant-info-img" src={Object.values(image)} alt="name" />
+        <img className="plant-info-img" src={image} alt="name" />
       </div>
       <div className="text">
         <h3 className="plant-info-name">{chosenName}</h3>

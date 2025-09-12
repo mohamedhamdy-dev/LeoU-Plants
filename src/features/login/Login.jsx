@@ -1,6 +1,5 @@
-import { React, useState } from "react";
+import { useState } from "react";
 import "./Login.css";
-import "./MediaQueries.css";
 import { CreateAccount } from "./CreateAccount";
 import LoginForm from "./LoginForm";
 
@@ -19,7 +18,7 @@ export default function Login() {
       {isLogin ? (
         <LoginForm name={name} setName={setName} onSwitch={handleSwitch} />
       ) : (
-        <CreateAccount name={name} setName={setName} onSwitch={handleSwitch} />
+        <CreateAccount onSwitch={handleSwitch} />
       )}
     </div>
   );
@@ -28,9 +27,9 @@ export default function Login() {
 function Welcome({ name }) {
   return (
     <div className="login-page-text">
-      <h1 className="login-page-heading">
+      <h2 className="login-page-heading">
         🌿 Dear Plant Enthusiast, {name.split(" ")[0]}😊
-      </h1>
+      </h2>
       <p className="login-page-message">
         Hello into a world where nature meets nurture, and where every leaf
         tells a story. Welcome to LeoU's, your premier destination for all
@@ -45,9 +44,9 @@ function Welcome({ name }) {
 function WelcomeBack({ name }) {
   return (
     <div className="login-page-text">
-      <h1 className="login-page-heading">
+      <h2 className="login-page-heading">
         ☘️ Welcome Back, {name.split(" ")[0]} 🥳
-      </h1>
+      </h2>
       <p className="login-page-message">
         🏵️ Thank you for choosing LeoU's as your botanical destination once
         again. Your return marks the growth of our shared plant-loving

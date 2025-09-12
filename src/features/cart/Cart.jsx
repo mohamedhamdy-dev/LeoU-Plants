@@ -1,6 +1,5 @@
 import { React } from "react";
 import "./Cart.css";
-import "./MediaQueries.css";
 import EmptyCart from "./EmptyCart";
 import { CartItem } from "./CartItem";
 import { useCart } from "../../context/cartContext";

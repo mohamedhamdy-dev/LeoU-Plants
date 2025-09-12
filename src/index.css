@@ -18,11 +18,10 @@
 }
 
 html {
-  background-image: url("./images/globalBack.jpg");
+  background-image: url("../public/global-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  /* height: 900px; */
   font-size: 62.5%;
   scroll-behavior: smooth;
   overflow-x: clip;

@@ -1,13 +1,13 @@
 import { React, useState, useReducer } from "react";
 import "./Store.css";
 import "./MediaQueries.css";
-import { Cart } from "../cart/Cart.js";
-import { Tools, Search, Sort } from "./Tools.js";
-import { plantsData } from "./plantsData.js";
-import { PlantInfo } from "./PlantInfo.js";
-import CartButton from "../cart/CartButton.js";
+import { Cart } from "../cart/Cart";
+import { Tools, Search, Sort } from "./Tools";
+import { plantsData } from "./plantsData";
+import { PlantInfo } from "./PlantInfo";
+import CartButton from "../cart/CartButton";
 import { useCart } from "../../context/cartContext";
-import { Card } from "./Card.js";
+import { Card } from "./Card";
 
 const initialState = plantsData;
 
@@ -25,6 +25,7 @@ function reducer(state, action) {
       return initialState;
     default:
       console.log("something went wrong");
+      return state;
   }
 }
 

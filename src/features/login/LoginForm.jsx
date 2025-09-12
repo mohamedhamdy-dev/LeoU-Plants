@@ -1,9 +1,8 @@
-import { React, useState } from "react";
-import user from "../../images/user.png";
+import { useState } from "react";
 import Button from "../../ui/Button";
 import { Link } from "react-router-dom";
 
-export function CreateAccount({ name, setName, onSwitch }) {
+export default function LoginForm({ name, setName, onSwitch }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -19,30 +18,22 @@ export function CreateAccount({ name, setName, onSwitch }) {
   }
 
   return (
-    <div className="create-form-box">
-      <form className="common-form create-form" onSubmit={handleSubmit}>
-        <div className="create-form-logo">
+    <div className="login-form-box">
+      <form className="common-form login-form" onSubmit={handleSubmit}>
+        <div className="login-form-logo">
           <img
-            src={user}
+            src="/account/login-icon.png"
             alt="user icon"
-            className="common-form-img create-form-img"
+            className="common-form-img login-form-img"
           />
         </div>
-        <p className="common-form-title create-form-title">Create Account</p>
+        <p className="common-form-title login-form-title">Login</p>
         <input
-          type="text"
+          type="email"
           className="input-field"
           placeholder="User Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          required
-        />
-        <input
-          type="email"
-          className="input-field"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
           required
         />
         <input
@@ -53,14 +44,13 @@ export function CreateAccount({ name, setName, onSwitch }) {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-
-        <Button onClick={handleSubmit}>Sign Up</Button>
+        <Button onClick={handleSubmit}>Log In</Button>
         <div className="form-footer">
           <Link className="form-footer-link" to="/Contact">
             Contact Us
           </Link>
           <button className="login-create-btn" onClick={onSwitch}>
-            Login
+            Sign Up
           </button>
         </div>
       </form>

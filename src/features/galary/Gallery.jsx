@@ -1,37 +1,31 @@
 import "./Gallery.css";
-import aa from "../../images/Gallary/aa.jpg";
-import bb from "../../images/Gallary/bb.jpg";
-import cc from "../../images/Gallary/cc.jpg";
-import dd from "../../images/Gallary/dd.jpg";
-import ee from "../../images/Gallary/ee.jpg";
-import ff from "../../images/Gallary/ff.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 const imagesData = [
   {
     id: 1,
-    img: aa,
+    img: "/gallary/aa.jpg",
   },
   {
     id: 2,
-    img: bb,
+    img: "/gallary/bb.jpg",
   },
   {
     id: 3,
-    img: cc,
+    img: "/gallary/cc.jpg",
   },
   {
     id: 4,
-    img: dd,
+    img: "/gallary/dd.jpg",
   },
   {
     id: 5,
-    img: ee,
+    img: "/gallary/ee.jpg",
   },
   {
     id: 6,
-    img: ff,
+    img: "/gallary/ff.jpg",
   },
 ];
 var settings = {
@@ -87,20 +81,3 @@ function Image({ image }) {
     </div>
   );
 }
-
-//   {
-//     id: 7,
-//     img: gg,
-//   },
-//   {
-//     id: 8,
-//     img: hh,
-//   },
-//   {
-//     id: 9,
-//     img: jj,
-//   },
-//   {
-//     id: 10,
-//     img: kk,
-//   },

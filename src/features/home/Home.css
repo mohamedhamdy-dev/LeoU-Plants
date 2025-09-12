@@ -15,6 +15,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 2.4rem;
+  /* text-wrap: balance; */
 }
 
 .home-title {
@@ -26,7 +27,7 @@
 
 .home-message {
   font-size: 1.8rem;
-  text-align: left;
+  text-align: center;
   line-height: 1.3;
 }
 
@@ -46,17 +47,69 @@
   border: 1px solid transparent;
 }
 
-.home-btn:hover,
-.home-btn:active {
+.home-btn:hover {
   border: 1px solid var(--main-color);
   background-color: white;
   color: var(--main-color);
+  transition-duration: 0.3s;
+}
+
+.home-btn:active {
+  transform: translateY(20%);
 }
 
 .home-image-box {
   flex-basis: 60%;
+  text-align: center;
 }
 
 .home-img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 50rem;
+}
+
+/* *************************** */
+/*    Home Media Queries       */
+/* *************************** */
+
+@media (max-width: 1200px) {
+  .home-content {
+    padding: 1.8rem 1.6rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .home-content {
+    margin-top: 0;
+    flex-direction: column-reverse;
+  }
+  .home-content .home-text {
+    padding: 1.2rem 0.4rem;
+    max-width: 90%;
+    align-self: center;
+  }
+
+  .home-text .home-title {
+    font-size: 5rem;
+  }
+
+  .home-text .home-message {
+    font-size: 1.8rem;
+    text-align: left;
+    line-height: 1.3;
+  }
+
+  .home-text .home-btn:link,
+  .home-text .home-btn:visited {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-text .home-title {
+    font-size: 8vw;
+  }
+  .home-text .home-message {
+    font-size: 3.6vw;
+  }
 }

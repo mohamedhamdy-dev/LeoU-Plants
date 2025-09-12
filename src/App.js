@@ -1,13 +1,13 @@
 import { React } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./features/nav/NavBar";
-import Contact from "./features/contact/Contact.js";
-import Gallery from "./features/galary/Gallery.js";
-import Home from "./features/home/Home.js";
-import Store from "./features/store/Store.js";
-import Login from "./features/login/Login.js";
+import Contact from "./features/contact/Contact";
+import Gallery from "./features/galary/Gallery";
+import Home from "./features/home/Home";
+import Store from "./features/store/Store";
+import Login from "./features/login/Login";
 import PageNotFound from "./ui/PageNotFound";
-import CartProvider from "./context/cartContext.js";
+import CartProvider from "./context/cartContext";
 
 export default function App() {
   return (
