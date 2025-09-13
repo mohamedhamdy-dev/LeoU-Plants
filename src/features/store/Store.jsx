@@ -1,13 +1,10 @@
-import { React, useState, useReducer } from "react";
+import { useState, useReducer } from "react";
 import "./Store.css";
-import "./MediaQueries.css";
 import { Cart } from "../cart/Cart";
-import { Tools, Search, Sort } from "./Tools";
+import { ToolsBar, Search, Sort } from "./ToolsBar";
 import { plantsData } from "./plantsData";
-import { PlantInfo } from "./PlantInfo";
-import CartButton from "../cart/CartButton";
-import { useCart } from "../../context/cartContext";
 import { Card } from "./Card";
+import { IoCartOutline } from "react-icons/io5";
 
 const initialState = plantsData;
 
@@ -32,31 +29,28 @@ function reducer(state, action) {
 export default function Store() {
   const [state, dispatch] = useReducer(reducer, initialState); // for Sorting & Search
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const { chosen } = useCart();
 
-  function handleIsCartOpen() {
+  function handleToggleCart() {
     setIsCartOpen((isCartOpen) => !isCartOpen);
   }
 
   return (
     <>
-      <Tools>
+      <ToolsBar>
         <Search onSearch={dispatch} data={initialState} />
         <Sort onSort={dispatch} />
-        <CartButton onCartOpen={handleIsCartOpen} />
-      </Tools>
+        <IoCartOutline className="tools-cart-btn" onClick={handleToggleCart} />
+      </ToolsBar>
 
       {isCartOpen ? (
         <Cart />
       ) : (
-        <div className="store store-container">
-          <div className="products-container">
+        <div className="store-container">
+          <ul className="products-container">
             {state.map((card) => (
               <Card data={card} key={card.name} />
             ))}
-          </div>
-
-          {chosen ? <PlantInfo /> : null}
+          </ul>
         </div>
       )}
     </>

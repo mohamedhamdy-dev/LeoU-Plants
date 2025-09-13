@@ -1,0 +1,33 @@
+.counter-btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 1.6rem 0 1.6rem 0;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  transition: 0.3s;
+}
+
+.counter-btn:active {
+  transform: translateY(5px);
+}
+
+.counter-btn:hover {
+  background-color: #40c057;
+}
+
+.counter-box {
+  display: flex;
+  align-items: center;
+  gap: 1;
+}
+
+.counter-value {
+  font-size: 1.6rem;
+  text-align: center;
+  width: 3.6rem;
+}

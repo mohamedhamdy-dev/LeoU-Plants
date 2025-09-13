@@ -1,0 +1,29 @@
+{
+  "todohighlight.keywords": [
+    {
+      "text": "TODO",
+      "color": "white",
+      "backgroundColor": "#007acc"
+    },
+    {
+      "text": "FIXME",
+      "color": "black",
+      "backgroundColor": "yellow"
+    },
+    {
+      "text": "BUG",
+      "color": "white",
+      "backgroundColor": "red"
+    },
+    {
+      "text": "NOTE",
+      "color": "black",
+      "backgroundColor": "orange"
+    },
+    {
+      "text": "REVIEW",
+      "color": "white",
+      "backgroundColor": "green"
+    }
+  ]
+}

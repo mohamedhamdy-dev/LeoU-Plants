@@ -1,5 +1,6 @@
 export const plantsData = [
   {
+    id: 1,
     name: "Bromeliad Guzmania Yellow",
     image: "/plants/yellow-bromeliad.jpg",
     price: 49,
@@ -8,6 +9,7 @@ export const plantsData = [
   },
 
   {
+    id: 2,
     name: "Monstera",
     image: "/plants/monstera.jpg",
     price: 169,
@@ -16,6 +18,7 @@ export const plantsData = [
   },
 
   {
+    id: 3,
     name: "Red Anthurium",
     image: "/plants/RedAnthurium_white.jpg",
     price: 86,
@@ -24,12 +27,14 @@ export const plantsData = [
   },
 
   {
+    id: 4,
     name: "Red Prayer Plant",
     image: "/plants/red-prayer.jpg",
     price: 65,
     description: "Colorful and bold with hints of red on two-toned leaves",
   },
   {
+    id: 5,
     name: "Mini Money Tree",
     image: "/plants/mini-money-tree.jpg",
     price: 50,
@@ -38,6 +43,7 @@ export const plantsData = [
   },
 
   {
+    id: 6,
     name: "Money Tree Forest",
     image: "/plants/money-tree-forest.jpg",
     price: 70,
@@ -45,6 +51,7 @@ export const plantsData = [
       "The Money Tree Forest is the perfect low-care indoor plant to bring a tropical feel with a touch of good fortune. This grouping of sturdy trunks with their bright green, palm-like leaves offer the look of a lush, mini forest for your home decor.",
   },
   {
+    id: 7,
     name: "Bamboo Palm",
     image: "/plants/bamboo-palm_stone.jpg",
     price: 229,
@@ -52,6 +59,7 @@ export const plantsData = [
       "With dense foliage and lush fronds, the Bamboo Palm makes a statement. An air-purifying plant adaptable to low light, this palm can reach heights of up to 8 feet tall in the right conditions.",
   },
   {
+    id: 8,
     name: "Collection",
     image: "/plants/collection.jpg",
     price: 150,
@@ -59,6 +67,7 @@ export const plantsData = [
       "With dense foliage and lush fronds, the Bamboo Palm makes a statement. An air-purifying plant adaptable to low light, this palm can reach heights of up to 8 feet tall in the right conditions.",
   },
   {
+    id: 9,
     name: "Philodendron Birkin",
     image: "/plants/philodendron.jpg",
     price: 60,
@@ -66,6 +75,7 @@ export const plantsData = [
       "Seeking a plant that effortlessly combines elegance and ease? Look no further than the Philodendron Birkin – a unique philodendron cultivar with lush, glossy leaves adorned by intricate white pinstripes.",
   },
   {
+    id: 10,
     name: "Dracaena Golden Heart",
     image: "/plants/dracaena.jpg",
     price: 99,
@@ -73,6 +83,7 @@ export const plantsData = [
       "With wide, striking leaves and upright stature, the Dracaena Golden Heart is one of the best plants for new or hands-off plant parents looking for a dash of greenery to spruce up any corner.",
   },
   {
+    id: 11,
     name: "Calathea Freddie",
     image: "/plants/calathea.jpg",
     price: 49,
@@ -80,6 +91,7 @@ export const plantsData = [
       "Light and airy, with light green leaves and dark green striping",
   },
   {
+    id: 12,
     name: "Variegated Schefflera",
     image: "/plants/schefflera-varigated.jpg",
     price: 99,
@@ -88,6 +100,7 @@ export const plantsData = [
   },
 
   {
+    id: 13,
     name: "Snake Plant",
     image: "/plants/sansevieria.jpg",
     price: 39,

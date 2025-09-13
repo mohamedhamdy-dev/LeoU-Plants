@@ -2,30 +2,7 @@
 /*          Cart               */
 /* *************************** */
 
-.btn-cart {
-  display: block;
-  width: fit-content;
-  border: none;
-  background-color: transparent;
-  text-align: left;
-  margin: 0 auto;
-}
-
-.btn-cart svg {
-  cursor: pointer;
-  fill: var(--main-color);
-  transition: all 0.3s;
-}
-
-.btn-cart:hover svg {
-  transform: scale(1.1);
-  fill: #fff;
-}
-
-/* *************************** */
-
 .cart {
-  /* background-color: red; */
   min-height: 24rem;
   color: var(--main-color);
   user-select: none;
@@ -43,7 +20,6 @@
 }
 
 .cart-item {
-  /* background-color: blue; */
   display: grid;
   align-items: center;
   gap: 1rem;

@@ -1,18 +1,26 @@
-import { useCart } from "../../context/cartContext";
+import Modal from "../../ui/Modal";
+import { PlantInfo } from "./PlantInfo";
+import "./Card.css";
 
 export function Card({ data }) {
   const { name, image, price } = data;
-  const { handleChosen } = useCart();
 
   return (
-    <div className="product-item" onClick={() => handleChosen(data)}>
-      <div className="product-item-image">
-        <img className="product-item-img" src={image} alt={name} />
-      </div>
-      <div className="text">
-        <h2 className="product-item-name">{name}</h2>
-        <p className="product-item-price">{`$${price}`}</p>
-      </div>
-    </div>
+    <Modal>
+      <Modal.Trigger>
+        <div className="card-container">
+          <div>
+            <img className="card-img" src={image} alt={name} />
+          </div>
+          <div className="card-text">
+            <p className="line-clamp-1">{name}</p>
+            <p>{`$${price}`}</p>
+          </div>
+        </div>
+      </Modal.Trigger>
+      <Modal.Content>
+        <PlantInfo data={data} />
+      </Modal.Content>
+    </Modal>
   );
 }

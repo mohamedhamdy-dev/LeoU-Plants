@@ -1,7 +1,7 @@
 /* *************************** */
 /*            Store            */
 /* *************************** */
-
+/* 
 @media (max-width: 1200px) {
   .tools {
     grid-template-columns: 3fr 1.4fr 1fr !important;
@@ -133,4 +133,4 @@
     padding: 0.6em;
     width: 60%;
   }
-}
+} */

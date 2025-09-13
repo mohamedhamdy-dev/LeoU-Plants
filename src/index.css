@@ -38,6 +38,14 @@ body {
   outline: #2f9e44;
 }
 
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
 /* ********************************* */
 /*            Container              */
 /* ********************************* */

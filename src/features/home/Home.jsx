@@ -11,7 +11,7 @@ export default function Home() {
           Welcome new employees, reward your team, or thank clients with
           fully-grown potted plants shipped straight from our greenhouse.
         </p>
-        <Link to="/Login" className="home-btn">
+        <Link to="/account/sign-in" className="home-btn">
           Get Started
         </Link>
       </div>
