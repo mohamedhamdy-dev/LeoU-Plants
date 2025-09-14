@@ -1,10 +1,12 @@
 import { useState, useReducer } from "react";
 import "./Store.css";
 import { Cart } from "../cart/Cart";
-import { ToolsBar, Search, Sort } from "./ToolsBar";
+import ToolsBar from "./ToolsBar";
 import { plantsData } from "./plantsData";
 import { Card } from "./Card";
 import { IoCartOutline } from "react-icons/io5";
+import Search from "./Search";
+import Sort from "./Sort";
 
 const initialState = plantsData;
 

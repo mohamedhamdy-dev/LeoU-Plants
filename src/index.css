@@ -24,14 +24,12 @@ html {
   background-attachment: fixed;
   font-size: 62.5%;
   scroll-behavior: smooth;
-  overflow-x: clip;
 }
 
 body {
   color: #3a3a3b;
   font-family: "Comfortaa", "Raleway", sans-serif;
   font-weight: 400;
-  overflow-x: clip;
 }
 
 *:focus-visible {
@@ -63,6 +61,12 @@ body {
 }
 
 @media (min-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 800px) {
   .container {
     width: 750px;
   }

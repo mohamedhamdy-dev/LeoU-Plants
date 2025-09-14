@@ -1,0 +1,40 @@
+/* *************************** */
+/*          Search             */
+/* *************************** */
+
+.tools-search {
+  justify-self: self-start;
+  position: relative;
+}
+
+.tools-search-field {
+  border: none;
+  border-radius: 16px;
+  outline: none;
+  margin: 1rem 0;
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 1.2rem 2rem 1.2rem 3.6rem;
+}
+
+.tools-search-icon {
+  position: absolute;
+  width: 2.2rem;
+  height: 2.2rem;
+  fill: #000;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 8px;
+}
+
+/* *************************** */
+/*   Search Media Queries   */
+/* *************************** */
+
+@media (max-width: 660px) {
+  .tools-search {
+    width: 100%;
+    grid-row: 1;
+    grid-column: 1 / span 2;
+  }
+}
