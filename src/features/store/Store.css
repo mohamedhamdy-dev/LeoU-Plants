@@ -1,16 +1,12 @@
-/* *************************** */
-/*            Store            */
-/* *************************** */
-.store-container {
-  padding: 3.2rem;
-}
-
 .products-container {
+  padding-top: 3.2rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   column-gap: 2rem;
   row-gap: 2rem;
+  min-height: 48rem;
+  list-style-type: none;
 }
 
 /* *************************** */

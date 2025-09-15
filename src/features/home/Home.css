@@ -1,38 +1,34 @@
-/* ************************ */
-/*          Home            */
-/* ************************ */
-
-.home-content {
-  margin-top: 3rem;
+.home {
+  margin: 3.1rem 0;
   display: flex;
   justify-content: space-between;
   gap: 2.6rem;
 }
-.home-text {
+.home__content {
   flex-basis: 60%;
   padding: 1.2rem 2.6rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 2.4rem;
-  /* text-wrap: balance; */
 }
 
-.home-title {
+.home__title {
   text-align: center;
+  text-wrap: nowrap;
   font-size: 6rem;
   line-height: 0.9;
   letter-spacing: -0.6px;
 }
 
-.home-message {
+.home__message {
   font-size: 1.8rem;
   text-align: center;
   line-height: 1.3;
 }
 
-.home-btn:link,
-.home-btn:visited {
+.home__btn:link,
+.home__btn:visited {
   margin-top: 1.6rem;
   align-self: center;
   text-decoration: none;
@@ -47,69 +43,71 @@
   border: 1px solid transparent;
 }
 
-.home-btn:hover {
+.home__btn:hover {
   border: 1px solid var(--main-color);
   background-color: white;
   color: var(--main-color);
   transition-duration: 0.3s;
 }
 
-.home-btn:active {
+.home__btn:active {
   transform: translateY(20%);
 }
 
-.home-image-box {
-  flex-basis: 60%;
-  text-align: center;
-}
-
-.home-img {
-  width: 100%;
+.home__img {
   max-width: 50rem;
 }
 
-/* *************************** */
-/*    Home Media Queries       */
-/* *************************** */
+/* Media Queries  */
 
 @media (max-width: 1200px) {
-  .home-content {
+  .home {
     padding: 1.8rem 1.6rem;
+  }
+
+  .home__content {
+    padding: 0;
+  }
+
+  .home__content .home__title {
+    font-size: 5rem;
+  }
+
+  .home__content .home__message {
+    font-size: 1.6rem;
   }
 }
 
 @media (max-width: 992px) {
-  .home-content {
+  .home {
     margin-top: 0;
     flex-direction: column-reverse;
   }
-  .home-content .home-text {
+  .home .home__content {
     padding: 1.2rem 0.4rem;
     max-width: 90%;
     align-self: center;
   }
 
-  .home-text .home-title {
-    font-size: 5rem;
-  }
-
-  .home-text .home-message {
-    font-size: 1.8rem;
-    text-align: left;
-    line-height: 1.3;
-  }
-
-  .home-text .home-btn:link,
-  .home-text .home-btn:visited {
+  .home__content .home__btn:link,
+  .home__content .home__btn:visited {
     padding: 1rem;
+  }
+
+  .home__img {
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 500px) {
-  .home-text .home-title {
+  .home__content .home__title {
     font-size: 8vw;
   }
-  .home-text .home-message {
-    font-size: 3.6vw;
+  .home__content .home__message {
+    text-wrap: balance;
+  }
+
+  .home__img {
+    max-width: 36rem;
   }
 }

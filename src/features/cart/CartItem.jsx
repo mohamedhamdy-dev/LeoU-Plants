@@ -1,13 +1,14 @@
 import { MdOutlineRemoveShoppingCart } from "react-icons/md";
 import { useCart } from "../../context/cartContext";
 import Counter from "../../ui/Counter";
+import { motion } from "motion/react";
 
 export function CartItem({ item }) {
   const { id, name, image, count, price } = item;
   const { removeFromCart } = useCart();
 
   return (
-    <div className="cart-item">
+    <motion.div layout className="cart-item">
       <p className="cart-item-count">{count}X</p>
       <div className="cart-item-image">
         <img src={image} alt={name} />
@@ -28,6 +29,6 @@ export function CartItem({ item }) {
           Remove
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }

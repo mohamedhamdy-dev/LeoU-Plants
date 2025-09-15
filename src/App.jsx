@@ -6,9 +6,12 @@ import Home from "./features/home/Home";
 import Store from "./features/store/Store";
 import Account from "./features/account/Account";
 import PageNotFound from "./ui/PageNotFound";
-import CartProvider from "./context/cartContext";
 import SignIn from "./features/account/SignIn";
 import { SignUp } from "./features/account/SignUp";
+import { Cart } from "./features/cart/Cart";
+import StoreLayout from "./features/store/StoreLayout";
+import CartProvider from "./context/cartContext";
+import StoreProvider from "./context/storeContext";
 
 export default function App() {
   return (
@@ -16,18 +19,25 @@ export default function App() {
       <div className="container">
         <NavBar />
         <CartProvider>
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="gallery" element={<Gallery />} />
-            <Route path="store" element={<Store />} />
-            <Route path="account" element={<Account />}>
-              <Route index element={<SignIn />} />
-              <Route path="sign-in" element={<SignIn />} />
-              <Route path="sign-up" element={<SignUp />} />
-            </Route>
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
+          <StoreProvider>
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route path="contact" element={<Contact />} />
+              <Route path="gallery" element={<Gallery />} />
+              <Route path="store" element={<StoreLayout />}>
+                <Route index element={<Store />} />
+                <Route path="products" element={<Store />} />
+                <Route path="cart" element={<Cart />} />
+              </Route>
+
+              <Route path="account" element={<Account />}>
+                <Route index element={<SignIn />} />
+                <Route path="sign-in" element={<SignIn />} />
+                <Route path="sign-up" element={<SignUp />} />
+              </Route>
+              <Route path="*" element={<PageNotFound />} />
+            </Routes>
+          </StoreProvider>
         </CartProvider>
       </div>
     </BrowserRouter>

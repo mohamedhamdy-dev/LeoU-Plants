@@ -1,22 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { GoSearch } from "react-icons/go";
 import "./Search.css";
+import { useStore } from "../../context/storeContext";
 
-export default function Search({ onSearch, data }) {
-  const [searched, setSearched] = useState("");
+export default function Search() {
+  const [query, setQuery] = useState("");
 
-  useEffect(
-    function () {
-      const result = data.filter((el) =>
-        el.name.toLowerCase().startsWith(searched.toLowerCase())
-      );
-
-      onSearch({ type: "search", payload: result });
-
-      return () => onSearch({ type: "cleanUp" });
-    },
-    [searched, data, onSearch]
-  );
+  const { handleSearch } = useStore();
 
   return (
     <div className="tools-search">
@@ -25,8 +15,11 @@ export default function Search({ onSearch, data }) {
         type="text"
         className="tools-search-field"
         placeholder="Search"
-        value={searched}
-        onChange={(e) => setSearched(e.target.value)}
+        value={query}
+        onChange={(e) => {
+          setQuery(e.target.value);
+          handleSearch(e.target.value);
+        }}
       />
     </div>
   );

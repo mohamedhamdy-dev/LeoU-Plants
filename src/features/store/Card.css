@@ -4,7 +4,7 @@
   background-color: #e6fcf5;
   border-radius: 6.4rem;
   padding-bottom: 2.4rem;
-  border: 0.2rem solid var(--main-color);
+  border: 1px solid var(--main-color);
   overflow: hidden;
   max-height: 47.759rem;
   transition: all 0.4s;

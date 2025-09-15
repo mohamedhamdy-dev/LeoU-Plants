@@ -1,0 +1,45 @@
+.state-message-container {
+  position: relative;
+  background: url("../../public/state-message.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 450px;
+  border: 1px solid var(--main-color);
+  border-radius: 4.9rem 0;
+  margin-top: 3.6rem;
+}
+
+.state-message-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3.2rem;
+  border-radius: 3.2rem;
+  color: #fff;
+  font-size: 3.6rem;
+  background-color: rgb(0, 0, 0, 0.7);
+  text-wrap: nowrap;
+}
+
+/* Media Queries  */
+
+@media (max-width: 1200px) {
+  .state-message-text {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 660px) {
+  .state-message-text {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .state-message-text {
+    padding: 2.4rem;
+    font-size: 1.6rem;
+  }
+}

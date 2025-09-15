@@ -1,8 +1,8 @@
 import "./Cart.css";
-import EmptyCart from "./EmptyCart";
 import { CartItem } from "./CartItem";
 import { plantsData } from "../store/plantsData";
 import { useCart } from "../../context/cartContext";
+import StateMessage from "../../ui/StateMessage";
 
 export function Cart() {
   const { state } = useCart();
@@ -21,7 +21,7 @@ export function Cart() {
           ))}
         </div>
       ) : (
-        <EmptyCart />
+        <StateMessage message="Your cart is empty 😅" />
       )}
     </div>
   );

@@ -4,20 +4,18 @@ import "./Home.css";
 
 export default function Home() {
   return (
-    <div className="home-content">
-      <div className="home-text">
-        <h2 className="home-title">Blossom & Bloom</h2>
-        <p className="home-message">
+    <div className="home">
+      <div className="home__content">
+        <h2 className="home__title">Blossom & Bloom</h2>
+        <p className="home__message">
           Welcome new employees, reward your team, or thank clients with
           fully-grown potted plants shipped straight from our greenhouse.
         </p>
-        <Link to="/account/sign-in" className="home-btn">
+        <Link to="/account/sign-in" className="home__btn">
           Get Started
         </Link>
       </div>
-      <div className="home-image-box">
-        <img className="home-img" src="/home/home-bg.png" alt="Plant Care" />
-      </div>
+      <img className="home__img" src="/home/home-bg.png" alt="plant care" />
     </div>
   );
 }

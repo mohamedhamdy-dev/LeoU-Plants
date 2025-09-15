@@ -1,8 +1,5 @@
-/* *************************** */
-/*          Tools              */
-/* *************************** */
-
 .tools {
+  margin-top: 2.6rem;
   background-color: rgb(105, 219, 124, 0.5);
   display: grid;
   grid-template-columns: 4fr 1fr 1fr;
@@ -11,8 +8,15 @@
   border-radius: 2.4rem 0 2.4rem 0;
 }
 
-.tools-cart-btn {
+.tools-link {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
   margin: 0 auto;
+  width: fit-content;
+}
+
+.tools-link-icon {
   width: 3.2rem;
   height: 3.2rem;
   cursor: pointer;
@@ -20,13 +24,11 @@
   transition: all 0.3s;
 }
 
-.tools-cart-btn:hover {
+.tools-link-icon:hover {
   color: #fff;
 }
 
-/* *************************** */
-/*   Tools Bar Media Queries   */
-/* *************************** */
+/* Media Queries  */
 
 @media (max-width: 1200px) {
   .tools {

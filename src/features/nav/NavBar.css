@@ -1,13 +1,8 @@
-/* *************************** */
-/*            Header           */
-/* *************************** */
-
 .header {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.4rem 1.6rem;
 }
 
 .logo {
@@ -44,6 +39,8 @@
   color: white;
 }
 
+/* Media Queries */
+
 @media (max-width: 800px) {
   .nav-list-icon {
     display: flex;
@@ -51,16 +48,6 @@
     align-items: center;
     justify-content: center;
     padding: 2px;
-  }
-}
-
-/* *************************** */
-/*  Nav Bar Media Queries      */
-/* *************************** */
-
-@media (max-width: 786px) {
-  .header {
-    padding: 3.6rem 2rem 2rem 2rem;
   }
 }
 

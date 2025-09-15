@@ -5,52 +5,45 @@ import Slider from "react-slick";
 const imagesData = [
   {
     id: 1,
-    img: "/gallery/aa.jpg",
+    url: "/gallery/aa.jpg",
   },
   {
     id: 2,
-    img: "/gallery/bb.jpg",
+    url: "/gallery/bb.jpg",
   },
   {
     id: 3,
-    img: "/gallery/cc.jpg",
+    url: "/gallery/cc.jpg",
   },
   {
     id: 4,
-    img: "/gallery/dd.jpg",
+    url: "/gallery/dd.jpg",
   },
   {
     id: 5,
-    img: "/gallery/ee.jpg",
+    url: "/gallery/ee.jpg",
   },
   {
     id: 6,
-    img: "/gallery/ff.jpg",
+    url: "/gallery/ff.jpg",
   },
 ];
 var settings = {
   infinite: false,
-  speed: 500,
+  dots: true,
   slidesToShow: 3,
   slidesToScroll: 1,
   responsive: [
     {
       breakpoint: 1200,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        infinite: true,
-      },
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 1,
       },
     },
+
     {
-      breakpoint: 530,
+      breakpoint: 992,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -58,26 +51,17 @@ var settings = {
     },
   ],
 };
+
 export default function Gallery() {
   return (
-    <div className="gallery-container">
+    <div className="gallery">
       <Slider {...settings}>
-        {imagesData.map((curImage) => (
-          <Image image={curImage} key={curImage.id} />
+        {imagesData.map((image) => (
+          <div className="gallery__container">
+            <img src={image.url} alt={image.id} className="gallery__img" />
+          </div>
         ))}
       </Slider>
-    </div>
-  );
-}
-
-function Image({ image }) {
-  return (
-    <div className="gallery-image">
-      <img
-        src={Object.values(image)[1]}
-        alt={image.id}
-        className="gallery-image-img"
-      ></img>
     </div>
   );
 }
