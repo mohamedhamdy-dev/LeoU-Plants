@@ -1,5 +1,5 @@
 import Modal from "../../ui/Modal";
-import { PlantInfo } from "./PlantInfo";
+import Plant from "./Plant";
 import "./Card.css";
 
 export function Card({ data }) {
@@ -8,18 +8,18 @@ export function Card({ data }) {
   return (
     <Modal>
       <Modal.Trigger>
-        <div className="card-container">
+        <div className="card">
           <div>
-            <img className="card-img" src={image} alt={name} />
+            <img className="card__img" src={image} alt={name} />
           </div>
-          <div className="card-text">
+          <div className="card__text">
             <p className="line-clamp-1">{name}</p>
             <p>{`$${price}`}</p>
           </div>
         </div>
       </Modal.Trigger>
       <Modal.Content>
-        <PlantInfo data={data} />
+        <Plant data={data} />
       </Modal.Content>
     </Modal>
   );

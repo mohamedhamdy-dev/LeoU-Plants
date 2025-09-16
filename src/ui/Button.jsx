@@ -3,7 +3,7 @@ import "./Button.css";
 
 export default function Button({ onClick, children }) {
   return (
-    <button className="app-button submit-btn send-btn " onClick={onClick}>
+    <button className="app__btn" onClick={onClick}>
       {children}
     </button>
   );

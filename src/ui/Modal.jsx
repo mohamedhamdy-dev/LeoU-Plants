@@ -50,7 +50,7 @@ Modal.Content = function Content({ children }) {
     <AnimatePresence>
       {open && (
         <motion.div
-          className="modal-overlay"
+          className="modal__overlay"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -58,7 +58,7 @@ Modal.Content = function Content({ children }) {
         >
           <motion.div
             ref={modalRef}
-            className="modal-box"
+            className="modal__box"
             initial={{ scale: 0.8, opacity: 0, y: -50 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.8, opacity: 0, y: 50 }}
@@ -66,7 +66,7 @@ Modal.Content = function Content({ children }) {
           >
             {children}
             <IoCloseOutline
-              className="modal-close"
+              className="modal__close"
               onClick={() => setOpen(false)}
             />
           </motion.div>

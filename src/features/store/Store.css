@@ -1,4 +1,4 @@
-.products-container {
+.store {
   padding-top: 3.2rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -9,18 +9,16 @@
   list-style-type: none;
 }
 
-/* *************************** */
-/*    Store Media Queries      */
-/* *************************** */
+/* Media Queries  */
 
 @media (max-width: 991px) {
-  .products-container {
+  .store {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 550px) {
-  .products-container {
+  .store {
     grid-template-columns: 1fr;
   }
 }

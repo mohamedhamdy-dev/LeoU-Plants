@@ -1,8 +1,8 @@
-import "./PlantInfo.css";
+import "./Plant.css";
 import { useCart } from "../../context/cartContext";
 import Counter from "../../ui/Counter";
 
-export function PlantInfo({ data }) {
+export default function Plant({ data }) {
   const { state, addToCart, removeFromCart } = useCart();
 
   const { id, name, image, description, price } = data;
@@ -10,27 +10,27 @@ export function PlantInfo({ data }) {
   const count = cartItem ? cartItem.count : 1;
 
   return (
-    <div className="plant-info">
-      <img className="plant-info-img" src={image} alt="name" />
-      <div className="plant-info-content">
-        <h3 className="plant-info-name">{name}</h3>
-        <div className="plant-info-price-box">
-          <p className="plant-info-price">{`$${count * price}`}</p>
+    <div className="plant">
+      <img className="plant__img" src={image} alt={name} />
+      <div className="plant__content">
+        <h3 className="plant__name">{name}</h3>
+        <div className="plant__price-box">
+          <p>{`$${count * price}`}</p>
           {cartItem && <Counter id={id} />}
         </div>
-        <p className="plant-info-description">{description}</p>
+        <p className="plant__description">{description}</p>
 
         <div style={{ marginTop: "auto" }}>
           {cartItem ? (
             <button
-              className="delete-btn plant-info-cart-btns"
+              className="plant__btn--delete plant__btn"
               onClick={() => removeFromCart(id)}
             >
               Remove From Cart
             </button>
           ) : (
             <button
-              className="add-btn plant-info-cart-btns"
+              className="plant__btn--add plant__btn"
               onClick={() => addToCart(id, count)}
             >
               Add to Cart

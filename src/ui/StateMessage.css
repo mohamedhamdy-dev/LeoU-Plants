@@ -1,4 +1,4 @@
-.state-message-container {
+.state-message__box {
   position: relative;
   background: url("../../public/state-message.jpg");
   background-size: cover;
@@ -10,7 +10,7 @@
   margin-top: 3.6rem;
 }
 
-.state-message-text {
+.state-message__text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -24,21 +24,20 @@
 }
 
 /* Media Queries  */
-
 @media (max-width: 1200px) {
-  .state-message-text {
+  .state-message__text {
     font-size: 2.6rem;
   }
 }
 
 @media (max-width: 660px) {
-  .state-message-text {
+  .state-message__text {
     font-size: 2.4rem;
   }
 }
 
 @media (max-width: 500px) {
-  .state-message-text {
+  .state-message__text {
     padding: 2.4rem;
     font-size: 1.6rem;
   }

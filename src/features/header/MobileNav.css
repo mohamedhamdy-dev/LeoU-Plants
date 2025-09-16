@@ -1,9 +1,5 @@
-/* *************************** */
-/*         Mobile Nav          */
-/* *************************** */
-
 @media (max-width: 800px) {
-  .mobile-nav-list {
+  .mobile-nav {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -20,12 +16,12 @@
     z-index: 50;
   }
 
-  .mobile-nav-item {
+  .mobile-nav__item {
     padding: 0;
     width: 75%;
   }
 
-  .mobile-nav-list .mobile-nav-item a {
+  .mobile-nav .mobile-nav__item a {
     color: #14431d;
     display: block;
     margin: 0 auto;
@@ -38,7 +34,7 @@
 }
 
 @media (min-width: 800px) {
-  .mobile-nav-list {
+  .mobile-nav {
     display: none;
   }
 }

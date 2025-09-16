@@ -8,7 +8,7 @@
   border-radius: 2.4rem 0 2.4rem 0;
 }
 
-.tools-link {
+.tools__link {
   display: flex;
   justify-content: center;
   justify-items: center;
@@ -16,7 +16,7 @@
   width: fit-content;
 }
 
-.tools-link-icon {
+.tools__icon {
   width: 3.2rem;
   height: 3.2rem;
   cursor: pointer;
@@ -24,7 +24,7 @@
   transition: all 0.3s;
 }
 
-.tools-link-icon:hover {
+.tools__icon:hover {
   color: #fff;
 }
 
@@ -32,11 +32,11 @@
 
 @media (max-width: 1200px) {
   .tools {
-    grid-template-columns: 3fr 1.4fr 1fr !important;
+    grid-template-columns: 3fr 1.4fr 1fr;
   }
 }
 
-@media (max-width: 786px) {
+@media (max-width: 768px) {
   .tools {
     margin-top: 3rem;
   }

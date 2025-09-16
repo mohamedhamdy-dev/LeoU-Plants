@@ -17,9 +17,7 @@ export default function Contact() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    console.log(`Name : ${form.name}  
-      Email : ${form.email}
-      Message : ${form.message}`);
+    console.log(form);
 
     setForm({
       name: "",
@@ -30,12 +28,12 @@ export default function Contact() {
 
   return (
     <div className="contact">
-      {/* <div className="contact__form-box"> */}
       <form className="contact__form" onSubmit={handleSubmit} action="/action">
         <label htmlFor="name">Name:</label>
         <input
           type="text"
           id="name"
+          className="contact__name"
           placeholder="LeoU"
           value={form.name}
           onChange={handleChange}
@@ -45,8 +43,9 @@ export default function Contact() {
         <label htmlFor="email">Email:</label>
         <input
           type="text"
-          placeholder="LeoU@Example.com"
           id="email"
+          className="contact__email"
+          placeholder="LeoU@Example.com"
           value={form.email}
           onChange={handleChange}
           required
@@ -59,6 +58,7 @@ export default function Contact() {
           cols="30"
           rows="10"
           id="message"
+          className="contact__message"
           value={form.message}
           onChange={handleChange}
           required
@@ -68,8 +68,6 @@ export default function Contact() {
           Send
         </Button>
       </form>
-      {/* </div> */}
-
       <div className="contact__img-container">
         <img
           className="contact__img"

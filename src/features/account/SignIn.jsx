@@ -6,7 +6,7 @@ export default function SignIn() {
   const [form, setForm] = useState({ email: "", password: "" });
 
   function handleChange(e) {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    setForm({ ...form, [e.target.type]: e.target.value });
   }
 
   function handleSubmit(e) {
@@ -18,55 +18,49 @@ export default function SignIn() {
   }
 
   return (
-    <>
-      <div className="account-text">
-        <h2 className="account-heading">☘️ Welcome Back 🥳</h2>
-        <p className="account-message">
-          🏵️ Thank you for choosing LeoU's as your botanical destination once
-          again. Your return marks the growth of our shared plant-loving
-          community, and we can't wait to embark on this green adventure with
-          you.
+    <div className="account account--sign-in">
+      <div className="account__text">
+        <h2 className="account__title">☘️ Welcome Back 🥳</h2>
+        <p className="account__message">
+          🏵️ Thanks for choosing LeoU’s again! We’re glad to grow our
+          plant-loving community with you and can’t wait for this green journey
+          together
         </p>
       </div>
-      <div className="sign-in-form-box">
-        <form className="common-form login-form" onSubmit={handleSubmit}>
-          <div>
-            <img
-              src="/account/login-icon.png"
-              alt="user icon"
-              className="common-form-img"
-            />
-          </div>
-          <p className="common-form-title sign-in-title">sign in</p>
-          <input
-            type="email"
-            name="email"
-            className="input-field"
-            placeholder="User Name"
-            value={form.email}
-            onChange={handleChange}
-            required
+
+      <form className="account__form" onSubmit={handleSubmit}>
+        <div>
+          <img
+            src="/account/login-icon.png"
+            alt="user icon"
+            className="account__img"
           />
-          <input
-            type="password"
-            name="password"
-            className="input-field"
-            placeholder="Password"
-            value={form.password}
-            onChange={handleChange}
-            required
-          />
-          <Button onClick={handleSubmit}>Log In</Button>
-          <div className="form-footer">
-            <NavLink className="form-link" to="/contact">
-              Contact Us
-            </NavLink>
-            <NavLink className="form-link" to="/account/sign-up">
-              Sign Up
-            </NavLink>
-          </div>
-        </form>
-      </div>
-    </>
+        </div>
+        <p className="account__form-title">sign in</p>
+        <input
+          type="email"
+          className="account__field account__email"
+          placeholder="Email"
+          value={form.email}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="password"
+          className="account__field account__password"
+          placeholder="Password"
+          value={form.password}
+          onChange={handleChange}
+          required
+        />
+        <Button onClick={handleSubmit}>Sign In</Button>
+        <div>
+          <span className="account__footer-text">Don't have an account?</span>
+          <NavLink className="account__link" to="/account/sign-up">
+            Sign Up
+          </NavLink>
+        </div>
+      </form>
+    </div>
   );
 }

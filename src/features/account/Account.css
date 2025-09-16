@@ -1,14 +1,17 @@
-/* *************************** */
-/*           Login Page        */
-/* *************************** */
-.account-page {
+.account {
   display: flex;
   justify-content: space-around;
-  margin-top: 6.4rem;
-  padding-bottom: 2.4rem;
 }
 
-.account-text {
+.account--sign-in {
+  padding: 9.2rem 0 3.4rem 0;
+}
+
+.account--sign-up {
+  padding-top: 5.8rem;
+}
+
+.account__text {
   flex-basis: 60%;
   font-size: 1.6rem;
   display: flex;
@@ -17,21 +20,18 @@
   align-items: center;
 }
 
-.account-heading {
+.account__title {
   font-size: 2.6rem;
 }
 
-.account-message {
+.account__message {
   padding: 0.4rem 6rem;
   line-height: 1.4;
   margin-top: 1rem;
 }
 
-/* ******************************* */
-/* Common Style  */
-/* ******************************* */
-.input-field {
-  width: 85%;
+.account__field {
+  width: 90%;
   border: none;
   border-radius: 26px;
   font-size: 1.6rem;
@@ -42,196 +42,115 @@
   box-shadow: -1px 2px 4px -1px #555;
 }
 
-.input-field:focus {
+.account__field:focus {
   outline: 2px solid var(--main-color);
   outline-offset: 0px;
 }
 
-.form-footer {
-  align-self: stretch;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 10%;
-  color: var(--main-color);
-  font-size: 1.6rem;
-  margin-bottom: 2.4rem;
+.account__footer-text {
+  font-size: 1.4rem;
+  margin-right: 4px;
 }
-.form-link:link,
-.form-link:visited {
+
+.account__link:link,
+.account__link:visited {
   border: none;
   color: inherit;
   cursor: pointer;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   transition: all 0.3s;
   background-color: transparent;
   text-decoration: none;
 }
-.form-link:hover,
-.form-link:active {
+.account__link:hover,
+.account__link:active {
   color: #51cf66;
   transform: scale(1.1);
 }
 
-.submit-btn {
-  padding: 0.8rem 2.4rem;
-  margin-top: 1.6rem;
-}
-
-.submit-btn:active {
-  transform: translateY(10px);
-}
-
-.common-form-box {
-  flex-basis: 30%;
+.account__form {
   margin: 0 auto;
-}
-
-.common-form {
-  margin: 0 auto;
-  width: fit-content;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 3.6rem;
-  border: 0.2rem solid var(--main-color);
-  border-radius: 6.4rem;
-  padding: 1.5rem;
+  gap: 2.6rem;
+  border: 2px solid var(--main-color);
+  border-radius: 3.6rem;
+  padding: 1.6rem;
+  padding-bottom: 2.6rem;
   box-shadow: -0.8rem 0.7rem 0.6rem -0.2rem #999;
   align-items: center;
 }
 
-.common-form-img {
-  width: 12.8rem;
-  height: 12.8rem;
+.account__img {
+  width: 9.6rem;
+  height: 9.6rem;
   position: absolute;
-  top: -7rem;
+  top: -5rem;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.common-form-title {
+.account__form-title {
   font-size: 3rem;
   text-transform: uppercase;
   font-weight: 600;
-}
-
-[placeholder="User Name"] {
-  background-image: url("../../../public/form/user.png");
-}
-
-[placeholder="Email"] {
-  background-image: url("../../../public/form/email.png");
-}
-
-[placeholder="Password"] {
-  background-image: url("../../../public/form/padlock.png");
-}
-
-/* ******************************* */
-/* Login form box                  */
-/* ******************************* */
-
-.sign-in-title {
   margin-top: 1.6rem;
 }
 
-/* ******************************* */
-/* Create Acount form box  */
-/* ******************************* */
-
-.sign-up-title {
-  margin-top: 2.4rem;
+.account__name {
+  background-image: url("../../../public/form/user.png");
 }
 
-/* *************************** */
-/*   Login Page Media Queries  */
-/* *************************** */
+.account__email {
+  background-image: url("../../../public/form/email.png");
+}
+
+.account__password {
+  background-image: url("../../../public/form/padlock.png");
+}
+
+/* Media Queries  */
 
 @media (max-width: 992px) {
   html {
     font-size: 60%;
   }
-
-  .account-page .account-text {
-    flex-basis: 60%;
-  }
-
-  .account-page .account-heading {
-    font-size: 2.4rem;
-  }
-
-  .account-page .account-message {
-    padding: 0.4rem 4.8rem;
-  }
-
-  .account-page .sign-up-form-box,
-  .account-page .sign-in-form-box {
-    flex-basis: 40%;
-  }
-
-  .account-page .common-form-title {
-    font-size: 2.6rem;
-    margin-top: 3.2rem;
-  }
-}
-
-@media (max-width: 786px) {
-  html {
-    font-size: 58%;
-  }
-
-  .account-page {
+  .account {
     flex-direction: column;
     align-items: center;
     gap: 9.6rem;
   }
-  .account-page .account-heading {
-    font-size: 3.4rem;
+
+  .account__message {
+    padding: 0.4rem 2rem;
+    text-align: center;
   }
 
-  .account-page .account-message {
-    padding: 0.8rem 8vw;
-  }
-  .account-page .sign-up-form-box,
-  .account-page .sign-in-form-box {
-    width: 55%;
-  }
-
-  .account-page .common-form-title {
-    font-size: 4.2vw;
-  }
-
-  .account-page .input-field {
-    width: 75%;
-  }
-  .account-page .submit-btn {
-    padding: 0.8rem 2.4rem;
-    font-size: 1.6rem;
+  .account__form {
+    width: 80%;
+    max-width: 36rem;
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 600px) {
+  .account__message {
+    padding: 0.4rem 0;
+  }
+}
+
+@media (max-width: 500px) {
   html {
     font-size: 55%;
   }
-
-  .account-page .sign-up-form-box,
-  .account-page .sign-in-form-box {
-    width: 55%;
+  .account__message {
+    text-align: center;
   }
 }
 
-@media (max-width: 530px) {
-  .account-page .account-heading {
-    font-size: 5vw;
-  }
-  .account-page .common-form-title {
-    font-size: 7vw;
-  }
-  .account-page .sign-up-form-box,
-  .account-page .sign-in-form-box {
-    width: 85%;
+@media (max-width: 400px) {
+  .account__title {
+    font-size: 2.4rem;
   }
 }

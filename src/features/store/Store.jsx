@@ -11,7 +11,7 @@ export default function Store() {
   return noResults ? (
     <StateMessage message="No results found , try again 😅" />
   ) : (
-    <ul className="products-container">
+    <ul className="store">
       {state.map((card) => (
         <Card data={card} key={card.name} />
       ))}

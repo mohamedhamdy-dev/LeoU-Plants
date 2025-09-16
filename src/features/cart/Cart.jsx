@@ -12,17 +12,13 @@ export function Cart() {
     return { ...itemData, ...item };
   });
 
-  return (
-    <div className="cart">
-      {cartData.length > 0 ? (
-        <div className="cart-items__container">
-          {cartData.map((item) => (
-            <CartItem item={item} key={item.name} />
-          ))}
-        </div>
-      ) : (
-        <StateMessage message="Your cart is empty 😅" />
-      )}
-    </div>
+  return cartData.length > 0 ? (
+    <ul className="cart">
+      {cartData.map((item) => (
+        <CartItem item={item} key={item.name} />
+      ))}
+    </ul>
+  ) : (
+    <StateMessage message="Your cart is empty 😅" />
   );
 }

@@ -1,4 +1,4 @@
-import "./NavBar.css";
+import "./Header.css";
 import { IoIosList } from "react-icons/io";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
 import { AnimatePresence } from "motion/react";
 
-export default function NavBar() {
+export default function Header() {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   useEffect(() => {
@@ -21,20 +21,20 @@ export default function NavBar() {
 
   return (
     <header className="header">
-      <div className="logo">
-        <img src="/logo.png" alt="logo" className="logo-image" />
-        <div className="logo-text">LeoU's</div>
+      <div className="header__logo">
+        <img src="/logo.png" alt="logo" className="header__logo-img" />
+        <div>LeoU's</div>
       </div>
-      <nav className="nav">
-        <div className="nav-list-icon">
+      <nav>
+        <div className="header__icon-box">
           {isMobileNavOpen ? (
             <IoCloseOutline
-              className="nav-list-svg"
+              className="header__icon"
               onClick={() => setIsMobileNavOpen(false)}
             />
           ) : (
             <IoIosList
-              className="nav-list-svg"
+              className="header__icon"
               onClick={() => setIsMobileNavOpen(true)}
             />
           )}

@@ -8,12 +8,12 @@ export default function Counter({ id }) {
   const count = cartItem ? cartItem.count : 1;
 
   return (
-    <div className="counter-box">
-      <button className="counter-btn" onClick={() => decreaseCount(id)}>
+    <div className="counter">
+      <button className="counter__btn" onClick={() => decreaseCount(id)}>
         <FiMinus />
       </button>
-      <p className="counter-value">{count}</p>
-      <button className="counter-btn" onClick={() => increaseCount(id)}>
+      <p className="counter__value">{count}</p>
+      <button className="counter__btn" onClick={() => increaseCount(id)}>
         <FiPlus />
       </button>
     </div>

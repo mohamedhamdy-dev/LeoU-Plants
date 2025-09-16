@@ -9,11 +9,11 @@ export default function Search() {
   const { handleSearch } = useStore();
 
   return (
-    <div className="tools-search">
-      <GoSearch className="tools-search-icon" />
+    <div className="search">
+      <GoSearch className="search__icon" />
       <input
         type="text"
-        className="tools-search-field"
+        className="search__field"
         placeholder="Search"
         value={query}
         onChange={(e) => {

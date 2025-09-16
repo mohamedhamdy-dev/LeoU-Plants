@@ -1,5 +1,5 @@
 /* Overlay */
-.modal-overlay {
+.modal__overlay {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
@@ -9,13 +9,13 @@
 }
 
 /* Modal Box */
-.modal-box {
+.modal__box {
   position: relative;
   max-width: 75rem;
 }
 
 /* Close Button */
-.modal-close {
+.modal__close {
   width: 2.4rem;
   height: 2.4rem;
   position: absolute;
@@ -29,12 +29,12 @@
   transition-duration: 0.3s;
 }
 
-.modal-close:hover {
+.modal__close:hover {
   transform: rotate(180deg);
 }
 
 @media (max-width: 768px) {
-  .modal-close {
+  .modal__close {
     top: 6px;
     right: 6px;
   }

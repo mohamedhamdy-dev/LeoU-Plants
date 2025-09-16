@@ -1,16 +1,12 @@
-/* *************************** */
-/*         Desktop Nav         */
-/* *************************** */
-
-.desktop-nav-list {
+.desktop-nav {
   display: flex;
   gap: 2rem;
   list-style: none;
   z-index: 6;
 }
 
-.desktop-nav-item a:link,
-.desktop-nav-item a:visited {
+.desktop-nav__item a:link,
+.desktop-nav__item a:visited {
   text-decoration: none;
   color: black;
   padding: 0.8rem 1.6rem;
@@ -20,14 +16,16 @@
   transition: 0.2s;
 }
 
-.desktop-nav-item a:hover,
+.desktop-nav__item a:hover,
 .active {
   background-color: var(--main-color);
   color: white !important;
 }
 
+/* Media Queries  */
+
 @media (max-width: 800px) {
-  .desktop-nav-list {
+  .desktop-nav {
     display: none;
   }
 }

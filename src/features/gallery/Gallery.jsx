@@ -57,7 +57,7 @@ export default function Gallery() {
     <div className="gallery">
       <Slider {...settings}>
         {imagesData.map((image) => (
-          <div className="gallery__container">
+          <div className="gallery__container" key={image.id}>
             <img src={image.url} alt={image.id} className="gallery__img" />
           </div>
         ))}

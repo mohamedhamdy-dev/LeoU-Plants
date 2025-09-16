@@ -8,27 +8,20 @@ export function CartItem({ item }) {
   const { removeFromCart } = useCart();
 
   return (
-    <motion.div layout className="cart-item">
-      <p className="cart-item-count">{count}X</p>
-      <div className="cart-item-image">
-        <img src={image} alt={name} />
-      </div>
-
-      <p className="cart-item-name">{name}</p>
-      <p className="cart-item-price">Total Price: {count * price}$</p>
-
-      <div className="cart-control-btns">
+    <motion.li layout className="cart__item">
+      <p className="cart__item-count">{count}X</p>
+      <img src={image} alt={name} className="cart__item-img" />
+      <p className="cart__item-name">{name}</p>
+      <p className="cart__item-price">Total Price: {count * price}$</p>
+      <div className="cart__item-control">
         <Counter id={item.id} />
-        <button
-          className="btn-delete-cart-item"
-          onClick={() => removeFromCart(id)}
-        >
+        <button className="cart__delete-btn" onClick={() => removeFromCart(id)}>
           <MdOutlineRemoveShoppingCart
             style={{ width: "20px", height: "20px" }}
           />
           Remove
         </button>
       </div>
-    </motion.div>
+    </motion.li>
   );
 }

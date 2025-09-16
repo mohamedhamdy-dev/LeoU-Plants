@@ -10,7 +10,7 @@ export default function MobileNav({ onNav }) {
       animate={{ x: "0vw", translateX: "-50%" }}
       transition={{ type: "tween" }}
       exit={{ x: "-100vw" }}
-      className="mobile-nav-list"
+      className="mobile-nav"
     >
       <NavList onNav={onNav} />
     </motion.ul>

@@ -1,4 +1,4 @@
-.card-container {
+.card {
   width: fit-content;
   cursor: pointer;
   background-color: #e6fcf5;
@@ -10,16 +10,16 @@
   transition: all 0.4s;
 }
 
-.card-container:hover {
+.card:hover {
   transform: scale(1.04);
 }
 
-.card-img {
+.card__img {
   max-width: 100%;
   max-height: 39.6rem;
 }
 
-.card-text {
+.card__text {
   display: flex;
   color: #0d4534;
   font-size: 1.6rem;

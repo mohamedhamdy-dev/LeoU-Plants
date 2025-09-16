@@ -1,20 +1,8 @@
-/* *************************** */
-/*           Contact           */
-/* *************************** */
-/* .container .contact { */
 .contact {
   display: flex;
   gap: 7rem;
   font-size: 1.6rem;
   padding-top: 3.2rem;
-  /* margin-top: 3.6rem; */
-  /* padding-bottom: 2.4rem;
-}
-
-.contact__img-container {
-  /* flex-basis: 40%; */
-  /* padding-top: 20rem; */
-
   display: flex;
   justify-items: center;
   align-items: center;
@@ -24,13 +12,8 @@
   max-width: 45rem;
 }
 
-/* .contact__form-box {
-} */
-
 .contact__form {
   flex-basis: 50%;
-  /* max-width: 80%; */
-  /* margin: 0 auto; */
   max-width: 43rem;
   display: flex;
   flex-direction: column;
@@ -63,7 +46,7 @@
   outline-offset: 0px;
 }
 
-#message {
+.contact__message {
   max-height: 12.8rem;
   font-family: inherit;
   color: inherit;
@@ -75,32 +58,24 @@
   box-shadow: -2px 2px 4px grey;
 }
 
-#message:focus {
+.contact__message:focus {
   outline: 2px solid var(--main-color);
   outline-offset: 0px;
 }
 
-[id="name"] {
+.contact__name {
   background-image: url("../../../public/form/user.png");
 }
 
-[id="email"] {
+.contact__email {
   background-image: url("../../../public/form/email.png");
 }
 
-.contact .send-btn {
-  align-self: center;
-  padding: 0.6rem 2.4rem;
-}
-
 .contact__icon-box {
-  /* flex-basis: 10%; */
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  /* padding-top: 3.6rem; */
   justify-content: center;
-  /* margin-left: auto; */
 }
 
 .contact__icon {
@@ -122,43 +97,29 @@
   height: 4.8rem;
 }
 
-/* *************************** */
-/*    Contact Media Queries    */
-/* *************************** */
+.contact .app__btn {
+  padding: 0.6rem 2.4rem;
+}
+
+/* Media Queries  */
+@media (max-width: 1200px) {
+  .contact__img {
+    max-width: 35rem;
+  }
+}
 
 @media (max-width: 992px) {
-  .container .contact {
+  .contact {
     flex-direction: column;
   }
+  .contact__form {
+    width: 90%;
+  }
 
-  .contact__img-container {
-    padding-top: 1rem;
-    text-align: center;
-  }
-  .contact-background-img {
-    max-width: 80%;
-  }
   .contact__icon-box {
     gap: 4.8rem;
     max-width: 90%;
     margin: 0 auto;
     flex-direction: row;
-  }
-}
-
-@media (max-width: 500px) {
-  .contact__form {
-    max-width: 90%;
-    padding: 3.6rem 2.6rem;
-  }
-
-  .contact__icon-box {
-    padding-top: 0;
-  }
-}
-
-@media (max-width: 400px) {
-  .contact__icon-box {
-    gap: 2em;
   }
 }

@@ -1,4 +1,4 @@
-.app-button {
+.app__btn {
   cursor: pointer;
   color: white;
   width: fit-content;
@@ -10,9 +10,16 @@
   font-size: 1.3rem;
   font-weight: bold;
   transition-duration: 0.3s;
+  padding: 0.8rem 2.4rem;
+  margin-top: 1.6rem;
+  align-self: center;
 }
 
-.app-button:hover {
+.app__btn:hover {
   color: var(--main-color);
   background-color: white;
+}
+
+.app__btn:active {
+  transform: translateY(10px);
 }

@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavBar from "./features/nav/NavBar";
+
 import Contact from "./features/contact/Contact";
 import Gallery from "./features/gallery/Gallery";
 import Home from "./features/home/Home";
@@ -12,12 +12,13 @@ import { Cart } from "./features/cart/Cart";
 import StoreLayout from "./features/store/StoreLayout";
 import CartProvider from "./context/cartContext";
 import StoreProvider from "./context/storeContext";
+import Header from "./features/header/Header";
 
 export default function App() {
   return (
     <BrowserRouter>
       <div className="container">
-        <NavBar />
+        <Header />
         <CartProvider>
           <StoreProvider>
             <Routes>
