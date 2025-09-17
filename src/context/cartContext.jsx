@@ -1,7 +1,12 @@
 import { createContext, useContext, useReducer } from "react";
 
 const cartContext = createContext();
-const initialState = [];
+
+function init() {
+  const stored = localStorage.getItem("LeouPlantsCart");
+  const parsed = JSON.parse(stored || "[]");
+  return parsed;
+}
 
 function reducer(state, action) {
   switch (action.type) {
@@ -30,19 +35,37 @@ function reducer(state, action) {
   }
 }
 
-export default function CartProvider({ children }) {
-  const [state, dispatch] = useReducer(reducer, initialState);
+function updateCartStorage(callback) {
+  const stored = localStorage.getItem("LeouPlantsCart");
+  const parsed = JSON.parse(stored || "[]");
+  const updatedItems = callback(parsed);
+  localStorage.setItem("LeouPlantsCart", JSON.stringify(updatedItems));
+}
 
-  //TODO  ->  Use local storage
+export default function CartProvider({ children }) {
+  const [state, dispatch] = useReducer(reducer, [], init);
+
   function addToCart(id, count) {
-    dispatch({ type: "add", payload: { id, count } });
+    const newItem = { id, count };
+
+    updateCartStorage((parsed) => [...parsed, newItem]);
+    dispatch({ type: "add", payload: newItem });
   }
 
   function removeFromCart(id) {
+    updateCartStorage((parsed) => parsed.filter((item) => item.id !== id));
     dispatch({ type: "remove", payload: { id } });
   }
 
   function increaseCount(id) {
+    const count = state.find((item) => item.id === id).count;
+    if (count === 100) return;
+
+    updateCartStorage((parsed) =>
+      parsed.map((item) =>
+        item.id === id ? { ...item, count: item.count + 1 } : item
+      )
+    );
     dispatch({ type: "incCount", payload: { id } });
   }
 
@@ -50,6 +73,11 @@ export default function CartProvider({ children }) {
     const count = state.find((item) => item.id === id).count;
     if (count === 1) return;
 
+    updateCartStorage((parsed) =>
+      parsed.map((item) =>
+        item.id === id ? { ...item, count: item.count - 1 } : item
+      )
+    );
     dispatch({ type: "decCount", payload: { id } });
   }
 

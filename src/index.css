@@ -1,15 +1,12 @@
-/* ********************************* */
-/*            Variables              */
-/* ********************************* */
+/* Variables  */
+
 :root {
   --main-color: #2f9e44;
   --gray-color: #3a3a3b;
   --secondary-color: #f1f3f5;
 }
 
-/* ********************************* */
-/*            General Style          */
-/* ********************************* */
+/* General Style  */
 
 * {
   padding: 0;
@@ -44,9 +41,8 @@ body {
   -webkit-line-clamp: 1;
 }
 
-/* ********************************* */
-/*            Container              */
-/* ********************************* */
+/* container  */
+
 .container {
   margin-top: 5rem;
   margin-left: auto;

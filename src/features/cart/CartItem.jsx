@@ -9,10 +9,14 @@ export function CartItem({ item }) {
 
   return (
     <motion.li layout className="cart__item">
-      <p className="cart__item-count">{count}X</p>
-      <img src={image} alt={name} className="cart__item-img" />
+      <div className="cart__item__img-box">
+        <p className="cart__item-count">{count}X</p>
+        <img src={image} alt={name} className="cart__item-img" />
+      </div>
+
       <p className="cart__item-name">{name}</p>
       <p className="cart__item-price">Total Price: {count * price}$</p>
+
       <div className="cart__item-control">
         <Counter id={item.id} />
         <button className="cart__delete-btn" onClick={() => removeFromCart(id)}>
